@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 15px;
+}
+/* Nav */
+nav {
+    height: 46.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+nav .nav-link {
+    display: flex;
+    list-style: none;
+
+}
+
+nav .nav-link li:hover>a{
+    background-color: #ccc;
+    color: black;
+}
+
+nav .nav-link li a{
+    font-size: 15px;
+    display: block;
+    padding: 0px 24px;
+    line-height: 46.5px;
+    color: white;
+    text-decoration: none;
+}
+
+/* sub-nav */
+nav .nav-link li:hover>.sub-nav{
+    display: block;
+}
+
+.nav-link .sub-nav {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: white;
+}
+
+.nav-link .sub-nav li a{
+    color: black;
+    
+}
+
+/* search icon */
+nav .search-icon {
+    color: white;
+    padding: 0 24px;
+}
+
+nav .search-icon:hover {
+    background-color: red;
+}
+
+nav .search-icon i {
+    line-height: 46.5px;
+}
+
+/* Menu icon */
+nav .menu-icon {
+    color: white;
+    line-height: 46.5px;
+    padding: 0 24px;
+    display: none;
+}
+
+
+/* Banner */
+.banner .slider {
+    position: relative;
+}
+
+.banner .slider img{
+    width: 100%;
+}
+
+.banner .slider .slider-text {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    padding: 32px 16px;
+}
+
+.banner .slider .slider-text h3 {
+    margin: 10px 0px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.banner .slider .slider-text p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+/* end of slider */
+
+/* about section */
+.content-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 16px;
+    text-align: center;
+}
+.content-section .section-heading {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 15px 0px;
+
+}
+
+.content-section .section-sub-heading {
+    font-size: 15px;
+    font-style: italic;
+    color: #8f8d8d;
+    margin: 15px 0px;
+}
+
+.content-section .about-text {
+    margin: 10px 0px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.content-section .about-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+
+.content-section .about-info .about-info-section {
+    width: 25%;
+}
+
+.content-section .about-info .about-info-section p {
+    margin: 15px 0;
+}
+
+.content-section .about-info .about-info-section img {
+    width: 100%;
+}
+
+/* Tour section */
+.tour-section {
+    background-color: black;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.tour-section .ticket-list {
+    background-color: white;
+    color: black;
+    list-style: none;
+    margin: 30px 0px;
+}
+
+
+.tour-section .ticket-list li{
+    padding: 8px 16px;
+    text-align: left;
+    border-bottom: solid #ccc 1px;
+    opacity: 60%;
+}
+
+.tour-section .ticket-list li .sold-out{
+    color: white;
+    background-color: red;
+    font-size: 15px;
+    padding: 0 8px;
+    margin-left: 10px;
+}
+
+.tour-section .ticket-list li .quantity{
+    color: white;
+    background-color: black;
+    float: right;
+    text-align: center;
+    padding: 2px 8px;
+    border-radius: 50%;
+}
+
+.tour-section .places-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.places-list .place-item{
+    width: 32%;
+    background-color: white;
+    color: black;
+    
+}
+
+.places-list .place-item img{
+    width: 100%;
+}
+
+.places-list .place-item p {
+    padding: 15px;
+    text-align: left;
+}
+.places-list .place-item .date {
+    color: #8f8d8d;
+}
+
+.places-list .place-item button {
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    margin-bottom: 16px;
+    float: left;
+    margin-left: 15px;
+}
+
+/* contact-section */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0px;
+}
+
+
+.contact-info .contact-info-left {
+    width: 50%;
+    text-align: left;
+}
+
+.contact-info .contact-info-left i {
+    width: 30px;
+    height: 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact-info .contact-info-right {
+    width: 50%;
+    text-align: right;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-auto-rows: minmax(30px, auto);
+    grid-template-areas: 
+    "name email email"
+    "message message message"
+    ". . button";
+    row-gap: 5px;
+    column-gap: 10px;
+}
+
+.contact-info .contact-info-right .name {
+    grid-area: name;
+
+}
+
+.contact-info .contact-info-right .email {
+    grid-area: email;
+}
+
+.contact-info .contact-info-right .message {
+    grid-area: message;
+}
+
+.contact-info .contact-info-right button {
+    grid-area: button;
+    background-color: black;
+    color: white;
+}
+
+footer img {
+    width: 100%;
+}
+
+footer .footer-info {
+    padding: 64px 16px;
+    text-align: center;
+    opacity: 50%
+}
+
+footer .footer-info i{
+    font-size: 24px;
+}
+
+footer .footer-info p {
+    margin: 15px;
+    font-size: 15px;
+}
+/* end of article */
+
+/* Responsive for Smart phone */
+@media screen and (max-width : 580px) {
+    /* nav */
+    nav {
+        justify-content: flex-end;
+    }
+
+    nav .search-icon{
+        display: none;
+    }
+
+    nav .nav-left .nav-link {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color: black;
+        left: 0%;
+    }
+
+    nav .menu-icon {
+        display: block;
+        color: white;
+    }
+
+    nav .nav-link .sub-nav {
+        width: 100%;
+    }
+
+
+    nav .menu-icon:hover {
+        background-color: #8f8d8d;
+        color: black;
+    }
+
+    nav .nav-left:hover .nav-link{
+        display: block;
+    }
+
+    /* Banner */
+    .banner .slider .slider-text {
+        display: none;
+    }
+
+    /* About section */
+    .content-section .about-info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .content-section .about-info .about-info-section {
+        width: 70%;
+    }
+
+    /* Tour section */
+    .tour-section .places-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .tour-section .places-list .place-item {
+        width: 100%;
+    }
+
+    /* contact section */
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+    }
+    .contact-info .content-info-item{
+        width: 100%;
+    }
+
+    .contact-info .contact-info-right {
+        grid-template-areas: 
+        "name name name"
+        "email email email"
+        "message message message"
+        ". . button";
+        gap: 2px;
+    }
+}
